@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link rel="manifest" href="manifest.json">
+
     <!-- ios support -->
     <link rel="apple-touch-icon" href="images/icons/icon-72x72.png">
     <link rel="apple-touch-icon" href="images/icons/icon-96x96.png">
@@ -22,7 +23,22 @@
   <body>
     <main>
       <nav>
-        <h1>Dev'Coffee</h1>
+        <h1>Dev'Coffee qwerhuqherugqekhrjqgkheghqrhgkekwerg</h1>
+
+        <div class="columns">
+          <h1>VIDEO</h1>
+          <div class="column">
+            <p><button type="button" onclick="getStream('video')">Grab video</button></p>
+            
+            <video controls autoplay style="height:180px; width: 240px;"></video>
+          </div>
+          <div class="column">
+            <p><button type="button" onclick="getStream('audio')">Grab audio</button></p>
+            
+            <audio controls></audio>
+          </div>
+        </div>
+
         <ul>
           <li>Home</li>
           <li>About</li>
