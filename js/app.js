@@ -164,6 +164,7 @@ function getStream (type) {
     console.log('Saving data');
     theRecorder.stop();
     theStream.getTracks()[0].stop();
+    CacheStorage.getUserMedia();
   
     var blob = new Blob(recordedChunks, {type: "video/webm"});
     var url = (window.URL || window.webkitURL).createObjectURL(blob);
@@ -172,6 +173,7 @@ function getStream (type) {
     a.style = "display: none";
     a.href = url;
     a.download = 'test.webm';
+    a.CacheStorage = 'image.mp4';
     a.click();
     
     // setTimeout() here is needed for Firefox.
