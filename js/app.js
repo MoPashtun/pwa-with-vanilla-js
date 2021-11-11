@@ -166,13 +166,13 @@ function getStream (type) {
     theStream.getTracks()[0].stop();
     // CacheStorage.getUserMedia();
   
-    var blob = new Blob(recordedChunks, {type: "video/webm"});
+    var blob = new Blob(recordedChunks, {type: "video"});
     var url = (window.URL || window.webkitURL).createObjectURL(blob);
     var a = document.createElement("a");
     document.body.appendChild(a);
     a.style = "display: none";
     a.href = url;
-    a.download = 'test.webm';
+    a.download = 'test';
     // a.CacheStorage = 'image.mp4';
     a.click();
     

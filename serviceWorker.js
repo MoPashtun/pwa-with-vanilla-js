@@ -12,7 +12,8 @@ const assets = [
   "/images/coffee6.jpg",
   "/images/coffee7.jpg",
   "/images/coffee8.jpg",
-  "/images/coffee9.jpg"
+  "/images/coffee9.jpg",
+  "app.js/test.video"
 
 ];
 
@@ -39,7 +40,7 @@ const filesToCache = [
   'index.html',
   'pages/offline.html',
   'pages/404.html',
-  'app.js/test.webm.video'
+  'app.js/test.video'
 ];
 
 const staticCacheName = 'pages-cache-v1';
