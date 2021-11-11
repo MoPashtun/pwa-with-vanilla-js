@@ -13,6 +13,7 @@ const assets = [
   "/images/coffee7.jpg",
   "/images/coffee8.jpg",
   "/images/coffee9.jpg"
+
 ];
 
 self.addEventListener("install", installEvent => {
@@ -38,7 +39,7 @@ const filesToCache = [
   'index.html',
   'pages/offline.html',
   'pages/404.html',
-  'test.webm'
+  'app.js/test.webm.video'
 ];
 
 const staticCacheName = 'pages-cache-v1';
