@@ -172,9 +172,21 @@ function getStream (type) {
     document.body.appendChild(a);
     a.style = "display: none";
     a.href = url;
-    a.download = 'test';
+    console.log(url.toString());
+    const reader = new FileReader();
+
+    reader.readAsDataURL(blob);
+    reader.onload = () => {var base64data = reader.result;
+
+      localStorage.setItem("test",base64data); console.log(localStorage.getItem("test"));
+      console.log("SUCCESS");
+    }
+    
+
+
+    // a.download = 'test';
     // a.CacheStorage = 'image.mp4';
-    a.click();
+    // a.click();
     
     // setTimeout() here is needed for Firefox.
     setTimeout(function () {
