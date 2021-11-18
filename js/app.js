@@ -428,12 +428,6 @@ function readFiles(files) {
     item.innerHTML = '' + file.name + ', ' + file.type + ', ' + file.size + ' bytes, last modified ' + file.lastModifiedDate + '';
     target.appendChild(item);
   };
-    const reader = new FileReader();
-    reader.readAsDataURL(target);
-    reader.onload = () => {
-      var base64data = reader.result;
-      localStorage.setItem("Doc",base64data);
-    }
 }
 
 async function writeFile() {
@@ -479,6 +473,8 @@ function readFiles(files) {
     var reader = new FileReader();
     reader.addEventListener('load', getReadFile(reader, i));
     reader.readAsText(file);
+
+    localStorage.setItem("test");
 
     item.innerHTML = '' + file.name + ', ' + file.type + ', ' + file.size + ' bytes, last modified ' + file.lastModifiedDate + '';
     target.appendChild(item);
