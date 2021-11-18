@@ -83,7 +83,22 @@
               <td id="moInterval"></td>
             </tr>
           </table>
+          <div class="columns">
+            <div class="column">
+              <button class="btn-file">
+                Choose some files to read<br>(File API) <input type="file" onchange="readFiles(this.files)" multiple>
+              </button>
+              
+              <p>Number of selected files: <b id="count">N/A</b></p>
+            </div>
+            <div class="column">
+              <button class="btn-file" onclick="writeFile()">
+                Choose file to create or overwrite<br>(Native File System API)
+              </button>
+            </div>
+          </div>
           
+          <ul id="target"></ul>
           <p><small>Demo based on <a href="https://www.html5rocks.com/en/tutorials/device/orientation/" target="_blank" rel="noopener">HTML5 Rocks</a> article.</small></p>
           <li>Home</li>
           <li>About</li>
