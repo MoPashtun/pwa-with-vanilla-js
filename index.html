@@ -24,6 +24,11 @@
     <main>
       <nav>
         <h1>Dev'Coffee qwerhuqherugqekhrjqgkheghqrhgkekwerg</h1>
+        <p>
+          <button onclick="readContacts()">Read Contacts</button>
+        </p>
+        
+        <pre id="log"></pre>
         <p>Estimated storage usage is <b id="usage">unknown</b> bytes.</p>
 <p>Estimated storage quota is <b id="quota">unknown</b> bytes.</p>
 <p>Estimated usage is <b id="percent">unknown</b>%.</p>
@@ -45,8 +50,7 @@
         <video autoplay style="height:180px; width: 240px;" poster="https://image.freepik.com/free-icon/video-camera-symbol_318-40225.png"></video>
 <p><button onclick="getStream()">Grab video & start recording</button></p>
 <p><button onclick="download()">Download!</button></p>
-  
-<p><small>Demo by <a href="http://www.mcasas.tk/" target="_blank" rel="noopener">Miguel Casas-Sanchez</a>.</small></p>
+
 
         <ul>
           <button id="askButton">Ask for location</button>
