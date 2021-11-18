@@ -463,7 +463,7 @@ function readFiles(files) {
   var target = document.getElementById('target');
   target.innerHTML = '';
 
-  localStorage.setItem("target");
+  // localStorage.setItem("target");
 
   for (var i = 0; i < files.length; ++i) {
     var item = document.createElement('li');
