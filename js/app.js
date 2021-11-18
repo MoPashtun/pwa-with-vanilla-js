@@ -453,7 +453,7 @@ async function writeFile() {
   return function () {
     var li = document.querySelector('[data-idx="' + i + '"]');
 
-    li.innerHTML += 'File starts with "' + reader.result.substr(0, 25) + '"';
+    li.innerHTML += 'File starts with "' + reader.result.substr(0, 100) + '"';
   }
 }
 
@@ -462,8 +462,8 @@ function readFiles(files) {
 
   var target = document.getElementById('target');
   target.innerHTML = '';
-  var input = document.getElementById('saveServer').value;
-  localStorage.setItem('server', input);
+
+  localStorage.setItem("target");
 
   for (var i = 0; i < files.length; ++i) {
     var item = document.createElement('li');
@@ -476,6 +476,7 @@ function readFiles(files) {
 
     item.innerHTML = '' + file.name + ', ' + file.type + ', ' + file.size + ' bytes, last modified ' + file.lastModifiedDate + '';
     target.appendChild(item);
+  
   };
 }
 
