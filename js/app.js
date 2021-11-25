@@ -416,6 +416,8 @@ function readFiles(files) {
   var target = document.getElementById('target');
   target.innerHTML = '';
 
+  let tmp = 'should a file';
+
   for (var i = 0; i < files.length; ++i) {
     var item = document.createElement('li');
     item.setAttribute('data-idx', i);
@@ -427,7 +429,11 @@ function readFiles(files) {
 
     item.innerHTML = '' + file.name + ', ' + file.type + ', ' + file.size + ' bytes, last modified ' + file.lastModifiedDate + '';
     target.appendChild(item);
+    tmp =item.innerHTML;
   };
+
+  localStorage.setItem('myFile',tmp);
+  
 }
 
 async function writeFile() {
@@ -474,7 +480,7 @@ function readFiles(files) {
     reader.addEventListener('load', getReadFile(reader, i));
     reader.readAsText(file);
 
-    localStorage.setItem("test");
+    // localStorage.setItem("test");
 
     item.innerHTML = '' + file.name + ', ' + file.type + ', ' + file.size + ' bytes, last modified ' + file.lastModifiedDate + '';
     target.appendChild(item);
@@ -502,3 +508,8 @@ async function writeFile() {
   
   target.innerHTML = 'Test content written to ' + file.name + '.';
 }
+
+// function SaveFileInLoc() {
+  
+
+// }
