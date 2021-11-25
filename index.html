@@ -39,7 +39,15 @@
 <p>Estimated usage is <b id="percent">unknown</b>%.</p>
 <p>Persistent storage status is <b id="persisted">unknown</b>.</p>
 <p><button onclick="requestPersistence()">Request persistent storage</button></p>
-        <div class="columns">
+
+<p>Current permission status is <b id="status">unavailable</b>.</p>
+
+<p><button onclick="requestPermission()">Request permission</button></p>
+<p><button onclick="nonPersistentNotification()">Non-persistent notification</button></p>
+<p><button onclick="persistentNotification()">Persistent notification</button></p>
+
+<div class="columns">
+        
           <h1>VIDEO</h1>
           <div class="column">
             <p><button type="button" onclick="getStream('video')">Grab video</button></p>
